@@ -1,0 +1,119 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Компьютеры и комплектующие</title>
+ <style>
+
+    #input{
+    width:420px;
+    height:30px;
+    }
+
+    input::-webkit-input-placeholder {
+    color: #B6C0A5;
+    font-style: italic;
+    background: #E0EFCA;
+    }
+
+    input:-moz-placeholder {
+    color: #B6C0A5;
+    font-style: italic;
+    background: #E0EFCA;
+    }
+
+    input:-ms-input-placeholder {
+    color: #B6C0A5;
+    font-style: italic;
+    background: #E0EFCA;
+        }
+
+    .line2{
+    display:flex;
+    margin-left:80px;
+    }
+
+    .line2_1{
+    display:flex;
+    height:30px;
+    width:150px;
+    justify-content:center;
+align-items:center;
+    }
+
+    .line2_2{
+
+margin-left:20px;
+    }
+
+    .line2_3{
+    display:flex;
+    height:30px;
+    justify-content:center;
+    align-items:center;
+    background-color:orange;
+    padding:0px;
+    }
+
+    .line2_3 a{
+    text-decoration:none;
+    color:black;
+    }
+
+        .line{
+        margin-top:200px;
+        display:flex;
+justify-content:space-around;
+display:grid;
+flex-wrap:wrap;
+grid-template-columns: 20px 20px 700px;
+}
+
+.line1{
+border: 2px solid black;
+height:250px;
+display:flex;
+width:250px;
+justify-content:center;
+align-items:center;
+font-size:20px;
+flex-direction:column;
+margin-bottom:50px;
+}
+
+.line1 a{
+text-decoration:none;
+color:orange;
+}
+
+.line1 img{
+margin-bottom:10px;
+}
+    </style>
+</head>
+<body>
+<div class="line2">
+    <div align="center" class="line2_1"><h1>DNS</h1></div>
+    <div align="center" class="line2_3"><h2><a href="http://127.0.0.1:8000/dns">Каталог</a></h2></div>
+    <div class="line2_2" >
+        <form action="" method="get">
+            <input name="s" placeholder="Искать здесь..." type="search" id="input">
+            <button type="submit">Поиск</button>
+        </form>
+    </div>
+    <div align="center" class="line2_1">Сравнить</div>
+    <div align="center" class="line2_1">Избранное</div>
+    <div align="center" class="line2_1">Корзина</div>
+</div>
+<div class="line">
+    <div class="line1" align="center"><img src='{% static "img/3020826.png" %}' width="100px" height="100px" alt=""><a
+            href="http://127.0.0.1:8000/dns/komplektuyushhie-kompyutery-i-noutbuki">Компьютеры, ноутбуки и ПО</a></div>
+    <div class="line1" align="center"><img src='{% static "img/5921800.png" %}' width="100px" height="100px" alt=""><a
+            href="http://127.0.0.1:8000/dns/komplektuyushhie-kompyutery-i-noutbuki">Комплектующие для ПК</a></div>
+    <div class="line1" align="center"><img src='{% static "img/4154727.png" %}' width="100px" height="100px" alt=""><a
+            href="http://127.0.0.1:8000/dns/komplektuyushhie-kompyutery-i-noutbuki">Периферия и аксессуары</a></div>
+
+</div>
+</body>
+</html>

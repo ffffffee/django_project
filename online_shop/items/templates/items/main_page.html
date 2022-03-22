@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title>dns - интернет-магазин</title>
+    <style>
+    #input{
+    width:420px;
+    height:30px;
+    }
+
+    input::-webkit-input-placeholder {
+    color: #B6C0A5;
+    font-style: italic;
+    background: #E0EFCA;
+    }
+
+    input:-moz-placeholder {
+    color: #B6C0A5;
+    font-style: italic;
+    background: #E0EFCA;
+    }
+
+    input:-ms-input-placeholder {
+    color: #B6C0A5;
+    font-style: italic;
+    background: #E0EFCA;
+        }
+
+        .line{
+        display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+display:grid;
+grid-template-columns: 190px 190px 190px 190px;
+}
+
+.line1{
+border: 2px solid black;
+height:190px;
+display:flex;
+width:190px;
+justify-content:center;
+align-items:center;
+font-size:20px;
+flex-direction:column;
+margin-bottom:50px;
+}
+.line1 a{
+text-decoration:none;
+color:orange;
+}
+.line1 img{
+margin-bottom:10px;
+}
+
+    .line2{
+    display:flex;
+    margin-left:80px;
+    }
+
+    .line2_1{
+    display:flex;
+    height:30px;
+    width:150px;
+    justify-content:center;
+align-items:center;
+    }
+    .line2_2{
+margin-left:20px;
+
+    }
+
+    .line2_3{
+    display:flex;
+    height:30px;
+    text-decoration:none;
+    justify-content:center;
+    align-items:center;
+    background-color:orange;
+    padding:0px;
+    }
+    .line2_3 a{
+    text-decoration:none;
+    color:black;
+    }
+
+    </style>
+</head>
+<body>
+
+<div class="line2">
+    <div align="center" class="line2_1"><h1>DNS</h1></div>
+    <div align="center" class="line2_3"><h2><a href="http://127.0.0.1:8000/dns">Каталог</a></h2></div>
+    <div class="line2_2" >
+        <form action="" method="get">
+            <input name="s" placeholder="Искать здесь..." type="search" id="input">
+            <button type="submit">Поиск</button>
+        </form>
+    </div>
+    <div align="center" class="line2_1">Сравнить</div>
+    <div align="center" class="line2_1">Избранное</div>
+    <div align="center" class="line2_1">Корзина</div>
+</div>
+
+<h1 align="center">Каталог</h1>
+<div class="line">
+    <div class="line1" align="center"><img src='{% static "img/3051504.png" %}' width="50px" height="50px" alt=""><a
+            href="http://127.0.0.1:8000/dns/bytovaya-texnika">Бытовая<br>техника</a></div>
+    <div class="line1" align="center"><img src='{% static "img/1264658.png" %}' width="50px" height="50px"><a
+            href="http://127.0.0.1:8000/dns/smartfony-planshety-i-fototexnika">Смартфоны<br>и гаджеты</a></div>
+    <div class="line1" align="center"><img src='{% static "img/3289253.png" %}' width="50px" height="50px"><a
+            href="http://127.0.0.1:8000/dns/tv-i-multimedia">ТВ<br>и мультимедиа</a></div>
+    <div class="line1" align="center"><img src='{% static "img/1865154.png" %}' width="50px" height="50px"><a
+            href="http://127.0.0.1:8000/dns/komplektuyushhie-kompyutery-i-noutbuki">Компьютеры</a></div>
+    <div class="line1" align="center"><img src='{% static "img/2891455.png" %}' width="50px" height="50px"><a
+            href="http://127.0.0.1:8000/dns/ofis-i-set">Офис и сеть</a></div>
+    <div class="line1" align="center"><img src='{% static "img/897004.png" %}' width="50px" height="50px"><a
+            href="http://127.0.0.1:8000/dns/otdyx-i-razvlecheniya">Отдых и<br>развлечения</a></div>
+    <div class="line1" align="center"><img src='{% static "img/3461837.png" %}' width="50px" height="50px"><a
+            href="http://127.0.0.1:8000/dns/instrumenty">Инструменты</a></div>
+    <div class="line1" align="center"><img src='{% static "img/2400595.png" %}' width="50px" height="50px"><a
+            href="http://127.0.0.1:8000/dns/stroitelstvo-i-remont">Строительство<br>и ремонт</a></div>
+</div>
+</body>
+</html>
