@@ -1,12 +1,12 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Отдых и развлечения</title>
- <style>
-
- #input{
+    <title>Title</title>
+    <style>
+    #input{
     width:420px;
     height:30px;
     }
@@ -29,6 +29,33 @@
     background: #E0EFCA;
         }
 
+        .line{
+
+justify-content:space-around;
+flex-wrap:wrap;
+display:grid;
+grid-template-columns: 190px 190px 190px 190px;
+}
+
+.line1{
+border: 2px solid black;
+height:190px;
+display:flex;
+width:190px;
+justify-content:center;
+align-items:center;
+font-size:20px;
+flex-direction:column;
+margin-bottom:50px;
+}
+.line1 a{
+text-decoration:none;
+color:orange;
+}
+.line1 img{
+margin-bottom:10px;
+}
+
     .line2{
     display:flex;
     margin-left:80px;
@@ -41,58 +68,56 @@
     justify-content:center;
 align-items:center;
     }
-
     .line2_2{
-
 margin-left:20px;
+
     }
 
     .line2_3{
     display:flex;
     height:30px;
+    text-decoration:none;
     justify-content:center;
     align-items:center;
     background-color:orange;
     padding:0px;
     }
-
     .line2_3 a{
     text-decoration:none;
     color:black;
     }
 
-        .line{
-        margin-top:200px;
-        display:flex;
-justify-content:space-around;
-display:grid;
-flex-wrap:wrap;
-grid-template-columns: 20px 20px 20px 450px;
-}
+    .line2_1 a{
+    text-decoration:none;
+    color:black;
+    }
 
-.line1{
-border: 2px solid black;
-height:250px;
-display:flex;
-width:250px;
-justify-content:center;
-align-items:center;
-font-size:20px;
-flex-direction:column;
-margin-bottom:50px;
-}
+    .items{
+    margin-left:170px;
+    margin-top:100px;
+    }
+    .item{
+    padding: 30px 30px;
+    margin-bottom:50px;
+    display:grid;
+    background-color: #C8C8C8;
+    border-radius: 8px;
+    grid-template-columns: 190px 400px 190px;
+    width:700px;
+    }
 
-.line1 a{
-text-decoration:none;
-color:orange;
-}
+    .item a{
+    text-decoration:none;
+    color: black;
+    font-size:17px;
 
-.line1 img{
-margin-bottom:10px;
-}
+    }
+
+
     </style>
 </head>
 <body>
+
 <div class="line2">
     <div align="center" class="line2_1"><h1>DNS</h1></div>
     <div align="center" class="line2_3"><h2><a href="http://127.0.0.1:8000">Каталог</a></h2></div>
@@ -105,17 +130,24 @@ margin-bottom:10px;
     <div align="center" class="line2_1">Сравнить</div>
     <div align="center" class="line2_1">Избранное</div>
     <div align="center" class="line2_1">Корзина</div>
+    <div align="center" class="line2_1"><a href="http://127.0.0.1:8000/registration">Регистрация</a></div>
 </div>
-<div class="line">
-    <div class="line1" align="center"><img src='{% static "img/4357653.png" %}' width="100px" height="100px" alt=""><a
-            href="http://127.0.0.1:8000/otdyx-i-razvlecheniya">Портативные транспортные средства</a></div>
-    <div class="line1" align="center"><img src='{% static "img/3367305.png" %}' width="100px" height="100px" alt=""><a
-            href="http://127.0.0.1:8000/otdyx-i-razvlecheniya">Развлечения и хобби</a></div>
-    <div class="line1" align="center"><img src='{% static "img/2350864.png" %}' width="100px" height="100px" alt=""><a
-            href="http://127.0.0.1:8000/otdyx-i-razvlecheniya">Активнй отдых, спорт и туризм</a></div>
-    <div class="line1" align="center"><img src='{% static "img/595634.png" %}' width="100px" height="100px" alt=""><a
-            href="http://127.0.0.1:8000/otdyx-i-razvlecheniya">Товары для оформления праздников</a></div>
 
+<div class="items">
+    {%if items%}
+        {% for i in items %}
+            <div class="item" align="left">
+
+                    <img src='{% static link_img1 %}' alt="изображение" width="80px" height="80px" align="left">
+                    <a class="itemE" href="{%url 'item-detail' i.slug%}">{{i.item_name}}</a>
+                    <h2>{{i.price}}</h2>
+
+            </div>
+        {% endfor %}
+    {% else %}
+    {%
+        <h1 align="center">No items</h1>
+    {% endif %}
 </div>
 </body>
 </html>

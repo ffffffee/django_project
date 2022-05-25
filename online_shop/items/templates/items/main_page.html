@@ -32,7 +32,7 @@
         }
 
         .line{
-        display:flex;
+
 justify-content:space-around;
 flex-wrap:wrap;
 display:grid;
@@ -60,7 +60,7 @@ margin-bottom:10px;
 
     .line2{
     display:flex;
-    margin-left:80px;
+    margin-left:10px;
     }
 
     .line2_1{
@@ -89,13 +89,19 @@ margin-left:20px;
     color:black;
     }
 
+    .line2_1 a{
+    text-decoration:none;
+    color:black;
+    }
+
+
     </style>
 </head>
 <body>
 
 <div class="line2">
     <div align="center" class="line2_1"><h1>DNS</h1></div>
-    <div align="center" class="line2_3"><h2><a href="http://127.0.0.1:8000/dns">Каталог</a></h2></div>
+    <div align="center" class="line2_3"><h2><a href="http://127.0.0.1:8000">Каталог</a></h2></div>
     <div class="line2_2" >
         <form action="" method="get">
             <input name="s" placeholder="Искать здесь..." type="search" id="input">
@@ -103,28 +109,29 @@ margin-left:20px;
         </form>
     </div>
     <div align="center" class="line2_1">Сравнить</div>
-    <div align="center" class="line2_1">Избранное</div>
     <div align="center" class="line2_1">Корзина</div>
+    <div align="center" class="line2_1"><a href="http://127.0.0.1:8000/registration">Регистрация</a></div>
+    <div align="center" class="line2_1"><a href="http://127.0.0.1:8000/add-item">добавить товар</a></div>
 </div>
 
 <h1 align="center">Каталог</h1>
 <div class="line">
     <div class="line1" align="center"><img src='{% static "img/3051504.png" %}' width="50px" height="50px" alt=""><a
-            href="http://127.0.0.1:8000/dns/bytovaya-texnika">Бытовая<br>техника</a></div>
+            href="http://127.0.0.1:8000/bytovaya-texnika">Бытовая<br>техника</a></div>
     <div class="line1" align="center"><img src='{% static "img/1264658.png" %}' width="50px" height="50px"><a
-            href="http://127.0.0.1:8000/dns/smartfony-planshety-i-fototexnika">Смартфоны<br>и гаджеты</a></div>
+            href="http://127.0.0.1:8000/smartfony-planshety-i-fototexnika">Смартфоны<br>и гаджеты</a></div>
     <div class="line1" align="center"><img src='{% static "img/3289253.png" %}' width="50px" height="50px"><a
-            href="http://127.0.0.1:8000/dns/tv-i-multimedia">ТВ<br>и мультимедиа</a></div>
+            href="http://127.0.0.1:8000/tv-i-multimedia">ТВ<br>и мультимедиа</a></div>
     <div class="line1" align="center"><img src='{% static "img/1865154.png" %}' width="50px" height="50px"><a
-            href="http://127.0.0.1:8000/dns/komplektuyushhie-kompyutery-i-noutbuki">Компьютеры</a></div>
+            href="http://127.0.0.1:8000/komplektuyushhie-kompyutery-i-noutbuki">Компьютеры</a></div>
     <div class="line1" align="center"><img src='{% static "img/2891455.png" %}' width="50px" height="50px"><a
-            href="http://127.0.0.1:8000/dns/ofis-i-set">Офис и сеть</a></div>
+            href="http://127.0.0.1:8000/ofis-i-set">Офис и сеть</a></div>
     <div class="line1" align="center"><img src='{% static "img/897004.png" %}' width="50px" height="50px"><a
-            href="http://127.0.0.1:8000/dns/otdyx-i-razvlecheniya">Отдых и<br>развлечения</a></div>
+            href="http://127.0.0.1:8000/otdyx-i-razvlecheniya">Отдых и<br>развлечения</a></div>
     <div class="line1" align="center"><img src='{% static "img/3461837.png" %}' width="50px" height="50px"><a
-            href="http://127.0.0.1:8000/dns/instrumenty">Инструменты</a></div>
+            href="http://127.0.0.1:8000/instrumenty">Инструменты</a></div>
     <div class="line1" align="center"><img src='{% static "img/2400595.png" %}' width="50px" height="50px"><a
-            href="http://127.0.0.1:8000/dns/stroitelstvo-i-remont">Строительство<br>и ремонт</a></div>
+            href="http://127.0.0.1:8000/stroitelstvo-i-remont">Строительство<br>и ремонт</a></div>
 </div>
 </body>
 </html>
